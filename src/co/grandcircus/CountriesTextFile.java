@@ -48,12 +48,12 @@ public class CountriesTextFile {
 		PrintWriter output = null;
 
 		try {
-			output = new PrintWriter(new FileOutputStream(file, false));
+			output = new PrintWriter(new FileOutputStream(file, true));
 			for (Country country : countries) {
 			output.println(country);
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("Hey, contact customer service.");
+			System.out.println("Sorry, please contact customer service.");
 		} finally {
 			output.close();
 		}
